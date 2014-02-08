@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<mosinstall type="module" version="4.5.1">
+    <name>MosNewsWriter</name>
+    <creationDate>02/14/2010</creationDate>
+    <author>Chanh Ong</author>
+    <copyright>(C) 2009 OngETC</copyright>
+    <license>http://ongetc.com/gpl.html. GNU/GPL</license>
+    <authorEmail>chanh.ong@gmail.com</authorEmail>
+    <authorUrl>ongetc.com</authorUrl>
+    <version>0.8.1</version>
+    <description><![CDATA[Show NewsFlash with different modes (Flash, Marquee, TypeWriter, GH), created by Chanh Ong<p />Support COAddOns in making a small donation!<p /><a href="https://www.paypal.com/xclick/business=chanh.ong@gmail.com&item_name=Donation+for+MosCmenuTree&no_shipping=1&tax=0&currency_code=USD" target="_blank"><img src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" alt="Pay with PayPal - It's fast, free and save!" border="0"></a>]]></description>
+<files>
+<filename module="mod_mosnewswriter">mod_mosnewswriter.php</filename>
+<filename module="mod_mosnewswriter">mod_mosnewswriter/typewriter.js</filename>
+<filename module="mod_mosnewswriter">mod_mosnewswriter/readme.txt</filename>
+</files>
+<params>
+  <param name="source" type="list" default="category" label="Source" description="Source: local contents, categories or RSS?">
+    <option value="category">Category</option>
+    <option value="content">Content</option>
+    <option value="rss">RSS</option>
+  </param>
+	<param name="separator" type="spacer" default="From RSS" label=">>>" description="From RSS" />
+	<param name="rssurl" type="text" default="http://support.ongetc.com/index.php?option=com_rss&amp;feed=RSS2.0&amp;no_html=1" label="RSS Feed URL" description="RSS feed URL" />
+	<param name="separator" type="spacer" default="From Categories or Contents" label=">>>" description="From Categories or Contents" />
+	<param name="cid" type="text" default="1,3" label="ID" description="Category or Content ID ex: 1,2" />
+  <param name="sorting" type="list" default="1" label="Display order" description="Display the News in which order?">
+    <option value="Ordering">Ordering</option>
+    <option value="random">Random</option>
+    <option value="modified">Modified (desc)</option>
+    <option value="created">Created (desc)</option>    
+  </param>
+  <param name="items" type="text" default="0" label="How many?" description="Number of NewsFlash to display" />
+	<param name="separator" type="spacer" default="General Setting" label=">>>" description="General Setting" />
+  <param name="style" type="list" default="typewriter" label="Style" description="How to display the category">
+    <option value="flash">Flash</option>
+    <option value="marquee">Marquee</option>
+    <option value="typewriter">Type Writer</option>
+    <option value="gh">GH</option>
+  </param>
+  <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+  <param name="borders" type="text" default="0" label="Borders" description="Display a border around the NewsFlash box [0 for no borders / \'n\' for a border of \'n\' pixel(s)]" />
+  <param name="bgcolor" type="text" default="#878C8F" label="BackGround Color" description="Set the background color [empty for css color]" />
+  <param name="txtcolor" type="text" default="#333333" label="Text Color" description="Set the text color [empty for css color]" />
+  <param name="textlen" type="text" default="68" label="Text Length" description="Length of text to show on link" />
+  <param name="delay" type="text" default="60" label="Delay" description="Delay of between flash (in miliseconds) [0:fast / 60:slow (note:3000 for flash)]" />
+<param name="separator" type="spacer" default="TypeWriter Specific Setting" label=">>>" description="TypeWriter Specific Setting" />
+  <param name="pretext" type="text" default="LATEST: " label="Prefix Text" description="A prefix text to show before title" />
+<param name="separator" type="spacer" default="Marquee Specific Setting" label=">>>" description="Marquee Specific Setting" />
+  <param name="direction" type="list" default="left" label="Direction" description="Marquee : Choose the Direction of scrolling" >
+    <option value="up">Up</option>
+    <option value="down">Down</option>
+    <option value="right">Right</option>
+    <option value="left">Left</option>
+  </param>
+  <param name="height" type="text" default="19" label="Height" description="Height of the NewsFlash box [0 for automatic heighting]" />
+  <param name="scrollamount" type="text" default="1" label="Scrollamount" description="Lines scrolling - scroll step" />
+</params>
+</mosinstall>
